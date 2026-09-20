@@ -144,7 +144,7 @@ def test_no_two_leaf_lists_share_a_root(pair):
     hypothesis 가 길이 1~20 을 흔들며 반례를 찾는다. 전략에는 "마지막 리프를 복제한 목록"이
     섞여 있어서, 복제 방식으로 구현했다면 **반드시** 반례가 나온다:
 
-        Falsifying example: a=[b'\\x00', b'\\x01', b'\\x02'],
+        Failing test case: a=[b'\\x00', b'\\x01', b'\\x02'],
                             b=[b'\\x00', b'\\x01', b'\\x02', b'\\x02']
 
     그 화면을 본 다음 promote 로 고치는 것이 Lab 1.4 §1 의 순서다.

@@ -664,13 +664,15 @@ uv run pytest tests/unit/test_merkle.py -k no_two_leaf_lists_share_a_root
 네가 봐야 할 것 — **hypothesis가 반례를 찾아내고 최소 형태로 줄여서 보여준다**:
 
 ```
-Falsifying example: test_no_two_leaf_lists_share_a_root(
+Failing test case: test_no_two_leaf_lists_share_a_root(
     a=[b'\x00', b'\x01', b'\x02'],
     b=[b'\x00', b'\x01', b'\x02', b'\x02'],
 )
   merkle_root(a) == merkle_root(b) == '9d1e...'
   ← 서로 다른 글 목록인데 루트가 같다
 ```
+
+> hypothesis 버전에 따라 이 줄이 `Falsifying example:`로 나오기도 한다. 같은 것이다.
 
 **글 3개짜리 블록과, 마지막 글을 한 번 더 복사해 붙인 글 4개짜리 블록의 머클 루트가 완전히 같다.**
 루트가 같으면 블록 해시도 같다. **변조된 블록과 원본 블록이 구분되지 않는다.**
