@@ -1,0 +1,84 @@
+# ---- 절대 커밋하면 안 되는 것 (Phase 0에 선등록) ----
+# Phase 3에서 개인키가 생긴다. 그때 추가하면 늦을 수 있다.
+*.key
+*.pem
+keystore/
+.env
+.env.*
+!.env.example
+secrets/
+
+# ---- 체인 데이터 / 런타임 산출물 ----
+chain.json
+chain.jsonl
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+data/
+node*/data/
+posts.json
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ---- 가상환경 / 패키지 ----
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# ---- 테스트 / 품질 도구 ----
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# ---- 에디터 / OS ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ---- 실습 스크래치 (labs/ 는 커밋하되 산출물은 제외) ----
+labs/**/out/
+labs/**/*.json
+!labs/**/*.example.json
+
+# ---- 컨트랙트 빌드 산출물 (Phase 7) ----
+contracts/build/
+contracts/artifacts/
+contracts/cache/
