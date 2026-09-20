@@ -77,8 +77,8 @@ Phase 2 이후의 랩 수는 해당 Phase 랩 문서가 작성될 때 채운다.
 **DoD**
 - [x] `uv run pytest` 통과 — `2 passed` (스모크만. Phase 1 테스트는 `testpaths`로 기본 실행에서 제외)
 - [x] `uv run ruff check` 무경고 — `All checks passed!`
-- [ ] origin에 push 성공 (커밋은 사용자가 직접) ← **사용자 차례**
-- [ ] GitHub Actions CI 초록 ← **사용자 차례** (push해야 처음 돈다)
+- [x] origin에 push 성공 (커밋 `60a9c1c`, 2026-09-20 — **사용자 요청으로 에이전트가 대행**)
+- [x] GitHub Actions CI 초록 (run 35483662826, 9초, `ruff` + `pytest` 통과)
 - [x] CLAUDE.md의 빌드/테스트 명령 섹션 갱신
 
 **보여줄 수 있는 한 장면**: (push 후 GitHub 커밋 옆 초록 체크 스크린샷을 남긴다)
